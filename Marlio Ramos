@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu Currículo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 20px;
+      background-color: #f8f9fa;
+    }
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Currículo -->
+  <h1 class="text-center">João da Silva</h1>
+  <p class="text-center text-muted">Desenvolvedor Full Stack | joao@email.com | (11) 99999-9999</p>
+
+  <hr>
+
+  <h2 class="section-title">Resumo Profissional</h2>
+  <p>Desenvolvedor com mais de 5 anos de experiência em criação de aplicações web e mobile. Especialista em React, Node.js, e bancos de dados relacionais e não-relacionais.</p>
+
+  <h2 class="section-title">Experiência</h2>
+  <ul>
+    <li><strong>Empresa X</strong> - Desenvolvedor Sênior (2020 - Atual)</li>
+    <li><strong>Empresa Y</strong> - Desenvolvedor Pleno (2017 - 2020)</li>
+  </ul>
+
+  <h2 class="section-title">Formação</h2>
+  <ul>
+    <li><strong>Universidade ABC</strong> - Bacharelado em Ciência da Computação (2013 - 2017)</li>
+  </ul>
+
+  <h2 class="section-title">Habilidades</h2>
+  <ul>
+    <li>HTML, CSS, JavaScript, TypeScript</li>
+    <li>React, Vue, Angular</li>
+    <li>Node.js, Express, Django</li>
+    <li>MySQL, PostgreSQL, MongoDB</li>
+  </ul>
+
+  <hr>
+
+  <!-- Formulário -->
+  <h2 class="section-title">Formulário de Contato / Projeto</h2>
+
+  <form id="contatoForm" enctype="multipart/form-data">
+    <fieldset class="border p-4 rounded">
+      <legend class="w-auto px-2">Informações Pessoais</legend>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" id="nome" class="form-control" required>
+        </div>
+        <div class="col">
+          <label for="sobrenome" class="form-label">Sobrenome</label>
+          <input type="text" id="sobrenome" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" id="telefone" class="form-control" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(11) 91234-5678" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea id="mensagem" class="form-control" rows="4" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="lingua" class="form-label">Idioma do serviço</label>
+        <select id="lingua" class="form-select">
+          <option>Português (pt-br)</option>
+          <option>Inglês</option>
+          <option>Espanhol</option>
+          <option>Francês</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="arquivo" class="form-label">Upload do Protótipo</label>
+        <input type="file" id="arquivo" class="form-control" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Linguagens Preferidas</label>
+        <select class="form-select" multiple>
+          <option>JavaScript</option>
+          <option>Python</option>
+          <option>Java</option>
+          <option>C#</option>
+          <option>PHP</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Banco de Dados Preferido</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="bd" id="mysql" value="MySQL">
+          <label class="form-check-label" for="mysql">MySQL</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="bd" id="mongo" value="MongoDB">
+          <label class="form-check-label" for="mongo">MongoDB</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="bd" id="postgres" value="PostgreSQL">
+          <label class="form-check-label" for="postgres">PostgreSQL</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="turno" class="form-label">Turno de Reunião</label>
+        <select id="turno" class="form-select">
+          <option>Manhã</option>
+          <option>Tarde</option>
+          <option>Noite</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="horario" class="form-label">Melhor horário para reunião</label>
+        <input type="time" id="horario" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="data" class="form-label">Previsão de Entrega</label>
+        <input type="date" id="data" class="form-control" required>
+      </div>
+
+      <div class="d-flex justify-content-end gap-2">
+        <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Validação básica do formulário
+  document.getElementById("contatoForm").addEventListener("submit", function(e) {
+    if (!this.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+      alert("Por favor, preencha todos os campos obrigatórios corretamente.");
+    } else {
+      alert("Formulário enviado com sucesso!");
+    }
+    this.classList.add("was-validated");
+  });
+</script>
+</body>
+</html>
